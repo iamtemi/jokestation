@@ -10,8 +10,8 @@ export default function App() {
       <Header />
 
       <Routes>
-        <Route path="/start" element={<LandingPage />} />
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/:category" element={<HomePage />} />
         <Route path="/saved-jokes" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
