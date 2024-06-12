@@ -12,7 +12,7 @@ export default function LandingPage() {
   }
   return (
     <section className="landing">
-      <h1 className="landing__title">Joke Station</
+      <h1 className="landing__title">Joke Station</h1>
       <p className="landing_instructions">
         Select a catagory or jump right in!
       </p>
