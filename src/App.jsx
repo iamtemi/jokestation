@@ -3,11 +3,11 @@ import Header from "./components/Header/Header";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import HomePage from "./pages/HomePage/HomePage";
 import SavedJokes from "./pages/SavedJokes/SavedJokes";
+import "./styles/App.scss";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <h1>JOKE STATION</h1>
       <Header />
 
       <Routes>
