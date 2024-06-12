@@ -15,3 +15,11 @@
   margin: 0;
   color: initial;
 }
+
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  margin-block: 0;
+  padding: 0;
+  padding-inline: 0;
+}
