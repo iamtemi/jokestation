@@ -1,0 +1,38 @@
+@use "../../styles/partials/mixins" as *;
+
+.header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  color: black;
+
+  &__link {
+    @include link-reset;
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    width: 2rem;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav {
+  display: flex;
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__item {
+    @include link-reset;
+  }
+}
