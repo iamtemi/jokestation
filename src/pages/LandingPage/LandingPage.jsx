@@ -3,18 +3,17 @@ import "./LandingPage.scss";
 import { useNavigate } from "react-router-dom";
 
 export default function LandingPage() {
-  
   const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
-    navigate(`/${e.target.category.value}`)
+    navigate(`/${e.target.category.value}`);
   }
   return (
     <section className="landing">
       <h1 className="landing__title">Joke Station</h1>
       <p className="landing_instructions">
-        Select a catagory or jump right in!
+        Select a category or jump right in!
       </p>
       <form className="landing_category" onSubmit={handleSubmit}>
         {/* Any, Misc, Programming, Dark, Pun, Spooky, Christmas */}
