@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Joke from "../../components/Joke/Joke";
 import axios from "axios";
 import { BeatLoader } from "react-spinners";
+import "./HomePage.scss";
 
 export default function HomePage() {
   const [jokes, setJokes] = useState([]);
@@ -33,14 +34,11 @@ export default function HomePage() {
     return <p>Error fetching post: {error.message}</p>;
   }
 
-  console.log(jokes);
-
   return (
-    <>
+    <section className="jokes">
       {jokes.map((joke) => (
         <Joke key={joke.id} joke={joke} />
       ))}
-      ;
-    </>
+    </section>
   );
 }

@@ -1,3 +1,5 @@
+import "./Joke.scss";
+
 export default function Joke({ joke }) {
   return (
     <article className="joke">
