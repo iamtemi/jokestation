@@ -1,16 +1,18 @@
 import { useState } from "react";
 import "./LandingPage.scss";
+import { useNavigate } from "react-router-dom";
 
 export default function LandingPage() {
-  //const [category, setCategory] = useState("Any");
+  
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(e.target.category.value);
+    navigate(`/${e.target.category.value}`)
   }
   return (
     <section className="landing">
-      <h1 className="landing__title">Joke Station</h1>
+      <h1 className="landing__title">Joke Station</
       <p className="landing_instructions">
         Select a catagory or jump right in!
       </p>
