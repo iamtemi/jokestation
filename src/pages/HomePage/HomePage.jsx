@@ -9,10 +9,10 @@ export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const fetchRandomJokes = async (category, noOfJokes) => {
+  const fetchTenRandomJokes = async () => {
     try {
       const { data } = await axios.get(
-        `https://v2.jokeapi.dev/joke/${category}?type=twopart&amount=${noOfJokes}`
+        "https://v2.jokeapi.dev/joke/Any?type=twopart&amount=10"
       );
       setJokes(data.jokes);
       setIsLoading(false);
@@ -23,7 +23,7 @@ export default function HomePage() {
   };
 
   useEffect(() => {
-    fetchRandomJokes();
+    fetchTenRandomJokes();
   }, []);
 
   if (isLoading) {
