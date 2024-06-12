@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Joke from "../../components/Joke/Joke";
 import axios from "axios";
 import { BeatLoader } from "react-spinners";
 import "./HomePage.scss";
 import { useParams } from "react-router-dom";
+import CardList from "../../components/CardList/CardList";
 
 export default function HomePage() {
   const [jokes, setJokes] = useState([]);
@@ -40,10 +40,6 @@ export default function HomePage() {
   }
 
   return (
-    <section className="jokes">
-      {jokes.map((joke) => (
-        <Joke key={joke.id} joke={joke} />
-      ))}
-    </section>
+    <CardList jokes={jokes} />
   );
 }
