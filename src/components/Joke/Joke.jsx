@@ -13,8 +13,6 @@ export default function Joke({ joke }) {
   const PORT = import.meta.env.VITE_PORT;
   const BASE_URL = import.meta.env.VITE_BASE_URL;
 
-  // console.log();
-
   const saveJoke = async () => {
     const newJoke = {
       setup: joke.setup,

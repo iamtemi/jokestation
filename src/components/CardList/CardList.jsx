@@ -1,7 +1,7 @@
 import "./CardList.scss";
-import Joke from "../Joke/Joke"
+import Joke from "../Joke/Joke";
 
-export default function CardList({jokes}) {
+export default function CardList({ jokes }) {
   return (
     <section className="jokes">
       {jokes.map((joke) => (
