@@ -9,9 +9,10 @@ export default function Joke({ joke }) {
     setJokeSide(!jokeSide);
   };
 
+  console.log(import.meta.env.VITE_PORT);
   const saveJoke = async () => {
     try {
-      const response = await axios.post(`https://localhost:${PORT}`, {
+      const response = await axios.post(`https://localhost:${PORT}/saved`, {
         setup: joke.setup,
         delivery: joke.delivery,
         category: joke.category,
