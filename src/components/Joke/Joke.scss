@@ -3,4 +3,9 @@
   border: 1px solid black;
   width: 30%;
   padding: 1rem;
+
+  &__div {
+    display: flex;
+    justify-content: space-between;
+  }
 }
